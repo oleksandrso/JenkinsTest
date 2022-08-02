@@ -8,5 +8,7 @@ public class checkJenkins {
         System.out.println("########ALL GOOD#######");
         System.out.println("");
         System.out.println("");
+        System.out.println("");
+        System.out.println("");
     }
 }
