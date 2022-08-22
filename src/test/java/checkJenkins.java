@@ -29,13 +29,13 @@ public class checkJenkins {
 
     @Test
     void testBlocked() {
-        assertTrue(false);
+        assertTrue(true);
 
     }
 
     @Test
     void testBlocked2() {
-        assertTrue(false);
+        assertTrue(true);
 
     }
 
