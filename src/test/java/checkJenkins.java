@@ -5,25 +5,39 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class checkJenkins {
     @Test
     void test1() {
-       assertTrue(true);
-       assertTrue(true);
-       assertTrue(true);
-    } @Test
+        assertTrue(true);
+
+    }
+
+    @Test
     void test2() {
-       assertTrue(true);
-       assertTrue(true);
-       assertTrue(true);
-    } @Test
+        assertTrue(true);
+
+    }
+
+    @Test
     void test3() {
-       assertTrue(true);
-       assertTrue(true);
-       assertTrue(true);
+        assertTrue(true);
+
     }
 
     @Test
     void test4() {
         assertTrue(true);
-        assertTrue(true);
-        assertTrue(true);
+
     }
+
+    @Test
+    void testBlocked() {
+        assertTrue(false);
+
+    }
+
+    @Test
+    void testBlocked2() {
+        assertTrue(false);
+
+    }
+
+
 }
