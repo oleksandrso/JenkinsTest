@@ -6,7 +6,8 @@ import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormTests extends TestBase {
@@ -65,30 +66,6 @@ public class RegistrationFormTests extends TestBase {
             });
             step("Upload image", () ->
                     $("#uploadPicture").uploadFromClasspath("img/" + picture));
-            step("Set address", () -> {
-                $("#currentAddress").val(currentAddress);
-                $("#state").scrollTo().click();
-                $("#stateCity-wrapper").$(byText(state)).click();
-                $("#city").click();
-                $("#stateCity-wrapper").$(byText(city)).click();
-            });
-            step("Submit form", () ->
-                    $("#submit").click());
-        });
-
-        step("Verify successful form submit", () -> {
-            $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-            $x("//td[text()='Student Name']").parent().shouldHave(text(firstName + " " + lastName));
-            $x("//td[text()='Student Email']").parent().shouldHave(text(email));
-            $x("//td[text()='Gender']").parent().shouldHave(text(gender));
-            $x("//td[text()='Mobile']").parent().shouldHave(text(mobile));
-            $x("//td[text()='Date of Birth']").parent().shouldHave(text(dayOfBirth + " " + monthOfBirth + "," + yearOfBirth));
-            $x("//td[text()='Subjects']").parent().shouldHave(text(subject1 + ", " + subject2));
-            $x("//td[text()='Hobbies']").parent().shouldHave(text(hobby1 + ", " + hobby2 + ", " + hobby3));
-            $x("//td[text()='Picture']").parent().shouldHave(text(picture));
-            $x("//td[text()='Address']").parent().shouldHave(text(currentAddress));
-            $x("//td[text()='State and City']").parent().shouldHave(text(state + " " + city));
         });
     }
-
 }
