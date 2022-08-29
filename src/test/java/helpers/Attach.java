@@ -41,11 +41,11 @@ public class Attach {
     public static String addVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrl(getSessionId())
-                + "' type='video/webm'></video></body></html>";
+                + "' type='video/mp4'></video></body></html>";
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".webm";
+        String videoUrl = "https://http://192.168.0.104:4444/video/" + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
