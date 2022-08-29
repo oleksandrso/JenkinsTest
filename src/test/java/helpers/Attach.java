@@ -45,7 +45,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://http://192.168.0.104:4444/video/" + sessionId + ".mp4";
+        String videoUrl = "http://192.168.0.104:4444/video/" + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
