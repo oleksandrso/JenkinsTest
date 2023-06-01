@@ -1,13 +1,19 @@
 package tests.simple;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Tag("simpleTests")
 public class PositiveTests {
     @Test
     void test0() {
         assertTrue(true);
+    }
+    @Test
+    void test10() {
+        assertTrue(false);
     }
 
     @Test
