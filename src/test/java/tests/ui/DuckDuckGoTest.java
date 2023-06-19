@@ -13,29 +13,4 @@ public class DuckDuckGoTest extends TestBase{
         open("https://duckduckgo.com");
         sleep(15000);
     }
-    @Test
-    void duckDuckGoOpens2() {
-        open("https://duckduckgo.com");
-        sleep(15000);
-    }
-    @Test
-    void duckDuckGoOpens3() {
-        open("https://duckduckgo.com");
-        sleep(15000);
-    }
-    @Test
-    void duckDuckGoOpens4() {
-        open("https://duckduckgo.com");
-        sleep(15000);
-    }
-    @Test
-    void duckDuckGoOpens5() {
-        open("https://duckduckgo.com");
-        sleep(15000);
-    }
-    @Test
-    void duckDuckGoOpens6() {
-        open("https://duckduckgo.com");
-        sleep(15000);
-    }
 }

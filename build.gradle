@@ -55,16 +55,20 @@ tasks.withType(Test) {
 
     testLogging {
         lifecycle {
-//            events "started", "failed"
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
     }
 }
 
-
-task simpletest(type: Test){
+task simpletest(type: Test) {
     useJUnitPlatform {
         includeTags 'simpleTests'
+    }
+}
+
+task uitest(type: Test){
+    useJUnitPlatform {
+        includeTags 'uiTests'
     }
 }
