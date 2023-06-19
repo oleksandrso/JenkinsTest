@@ -1,5 +1,6 @@
 package tests.ui;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
 import static com.codeborne.selenide.Configuration.browser;
@@ -49,4 +50,5 @@ public class TestBase {
     public void tearDown() {
         closeWebDriver();
     }
+
 }
