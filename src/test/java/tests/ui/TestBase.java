@@ -1,29 +1,20 @@
 package tests.ui;
 
-import io.qameta.allure.Allure;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-
-import static com.codeborne.selenide.Configuration.browser;
-import static com.codeborne.selenide.Configuration.remote;
-
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static helpers.Attach.getSessionId;
 
+@Tag("uiTests")
 public class TestBase {
 
     @BeforeEach
@@ -59,8 +50,8 @@ public class TestBase {
 
 
     @AfterEach
-    public void afterEach()  {
-            closeWebDriver();
+    public void afterEach() {
+        closeWebDriver();
     }
 
 
