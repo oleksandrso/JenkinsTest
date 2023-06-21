@@ -43,6 +43,7 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     if (System.getProperty("threads") != null) {
         systemProperties += [
@@ -66,12 +67,10 @@ task simpletest(type: Test) {
     useJUnitPlatform {
         includeTags 'simpleTests'
     }
-    systemProperties(System.getProperties())
 }
 
 task uitest(type: Test){
     useJUnitPlatform {
         includeTags 'uiTests'
     }
-    systemProperties(System.getProperties())
 }
