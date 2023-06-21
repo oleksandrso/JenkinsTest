@@ -42,7 +42,7 @@ public class TestBase {
 
         // Задаем настройки браузера и URL удаленного сервера для Selenide
         Configuration.browserCapabilities = options;
-        Configuration.remote = "http://176.36.164.107:4444/wd/hub";
+        Configuration.remote = System.getProperty("selenide.remote","http://176.36.164.107:4444/wd/hub");
 
         // Создаем новый экземпляр WebDriver, используя указанные настройки
         WebDriverRunner.setWebDriver(new RemoteWebDriver(new URL(Configuration.remote), options));
