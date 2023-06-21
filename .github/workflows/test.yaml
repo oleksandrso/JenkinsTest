@@ -1,6 +1,6 @@
-name: Test
+name: Test123
 
-on: [push]
+on: workflow_dispatch
 
 jobs:
   test:
