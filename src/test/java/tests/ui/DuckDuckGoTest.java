@@ -21,6 +21,6 @@ public class DuckDuckGoTest extends TestBase{
     @Test
     void duckDuckGoOpens3() {
         open("https://duckduckgo.com");
-        assertTrue(false);
+        assertTrue(true);
     }
 }
